@@ -17,15 +17,7 @@ namespace ToDoListMainApp
             _httpClient = new HttpClient();
             TaskList = new ObservableCollection<TaskItem>();
             TaskListView.ItemsSource = TaskList;
-            
-            if (DeviceInfo.Current.Platform == DevicePlatform.Android)
-            {
-                TaskAdd.IsVisible = false;
-            }
-            else
-            {
-                TaskAdd.IsVisible = true;
-            }
+
         }
 
         private async void OnSubmitButtonClicked(object sender, EventArgs e)
